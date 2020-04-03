@@ -5,8 +5,8 @@ A containerized kwatch instance : Run it where you kubectl proxy from
 
 ```bash
 export OPS_HOME=~/.kwatch
-export SSH_URI_TO_THIS_RECIPE_S_GIT=git@github...
-export HTTP_URI_TO_THIS_RECIPE_S_GIT=https://github.com/pokusio/
+export SSH_URI_TO_THIS_RECIPE_S_GIT=git@github.com:pegasus-io/containerized-kwatch.git
+export HTTP_URI_TO_THIS_RECIPE_S_GIT=https://github.com/pegasus-io/containerized-kwatch.git
 
 git clone ${HTTP_URI_TO_THIS_RECIPE_S_GIT} ${OPS_HOME}
 
