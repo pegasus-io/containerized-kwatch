@@ -1,0 +1,32 @@
+version: '3'
+#
+# ---------------------------------------------
+  kwatch:
+    hostname: 'kwatch.pokusio.io'
+    container_name: "kwatch.pokusio.io"
+    image: docker.pokusio.io/pokusio/kwatch:0.0.1
+    build:
+      context: oci/kwatch/
+      args:
+        - KUBECONFIG=/root/.kube/config
+    environment:
+      # The internal path to kubectl config dir
+      - KUBECONFIG=/root/.kube/
+    volumes:
+      - $PWD/kwatch/.kube:/root/.kube:rw
+      - $PWD/kwatch/.minikube:/root/.minikube:rw
+    networks:
+      - kwatchnet
+    # ---------------------------------------------
+    # [docker [run|exec] -it ...]
+    # stdinURI_DWNLD_STARTER_EXAMPLE_CONFIG
+    stdin_open:       true
+    # stdout
+    tty:              true
+    # ---------------------------------------------
+    # restart: always
+    restart: 'no'
+
+networks:
+  kwatchnet:
+    driver: bridge
