@@ -1,7 +1,8 @@
 # containerized-kwatch
+
 A containerized kwatch instance : Run it where you kubectl proxy from
 
-# run 
+# run
 
 ```bash
 export OPS_HOME=~/.kwatch

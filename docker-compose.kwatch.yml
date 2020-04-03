@@ -1,6 +1,7 @@
 version: '3'
 #
 # ---------------------------------------------
+services:
   kwatch:
     hostname: 'kwatch.pokusio.io'
     container_name: "kwatch.pokusio.io"
